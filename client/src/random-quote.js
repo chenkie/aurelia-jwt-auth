@@ -1,25 +1,29 @@
 import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-fetch-client';
+import {HttpClient} from 'aurelia-http-client';
 
+// Using Aurelia's dependency injection, we inject HttpClient
+// with the @inject decorator to make HTTP requests
 @inject(HttpClient)
 
-export class RandomQuote{
+export class RandomQuote {
+
   heading = 'Random Quote';
+
+  // View model that will be populated with the 
+  // the random quote retrieved from the API and
+  // displayed in the view
   randomQuote = '';
 
-  constructor(http, auth){
-    http.configure(config => {
-      config
-        .useStandardConfiguration()
-        .withBaseUrl('http://localhost:3001/api/');
-    });
-
+  constructor(http) {
     this.http = http;
-  }
+  };
 
-  activate(){
-    return this.http.fetch('random-quote')
-      .then(response => response.text())
-      .then(quote => this.randomQuote = quote);
-  }
+  activate() {
+    return this.http.get('http://localhost:3001/api/random-quote')
+    .then(response => {
+      this.randomQuote = response.content;
+    }).catch(error => {
+      console.log('Error getting quote');
+    });
+  };
 }

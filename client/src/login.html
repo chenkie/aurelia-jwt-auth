@@ -4,8 +4,8 @@
 
     <form role="form" submit.delegate="login()">
       <div class="form-group">
-        <label for="fn">Username</label>
-        <input type="text" value.bind="username" class="form-control" id="fn" placeholder="Username">
+        <label for="fn">Email</label>
+        <input type="text" value.bind="email" class="form-control" id="fn" placeholder="Email">
       </div>
       <div class="form-group">
         <label for="fn">Password</label>
@@ -13,6 +13,7 @@
       </div>
       <button type="submit" class="btn btn-default">Login</button>
     </form>
+    
     <hr>
     <div class="alert alert-danger" if.bind="loginError">${loginError}</div>
   </section>

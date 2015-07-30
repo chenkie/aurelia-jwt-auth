@@ -1,31 +1,40 @@
 import {inject} from 'aurelia-framework';
 import {AuthService} from 'paulvanbladel/aureliauth';
 
+// Using Aurelia's dependency injection, we inject the AuthService
+// with the @inject decorator
 @inject(AuthService)
 
 export class Signup{
-  constructor(auth){
-    this.auth = auth;
-  }
-
+  
   heading = 'Sign Up';
 
-  username;
+  // These view models will be given values
+  // from the signup form user input
+  email;
   password;
-  extraInfo;
+
+  // Any signup errors will be reported by
+  // giving this view model a value in the
+  // catch block within the signup method
   signupError;
 
-  signup(){
+  constructor(auth) {
+    this.auth = auth;
+  };
 
-    var userInfo = { username: this.username, password: this.password, extraInfo: this.extraInfo }
+  signup() {
+
+    // Object to hold the view model values passed into the signup method
+    var userInfo = { email: this.email, password: this.password }
 
     return this.auth.signup(userInfo)
     .then((response) => {
-      console.log("signed up");
+      console.log("Signed Up!");
     })
     .catch(error => {
       this.signupError = error.response;
     });
     
-  }
+  };
 }

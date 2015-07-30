@@ -10,9 +10,9 @@ export class NavBar {
 
   constructor(auth) {
     this.auth = auth;
-  }
+  };
 
   get isAuthenticated() {
     return this.auth.isAuthenticated();
-  }
+  };
 }

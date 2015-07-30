@@ -1,6 +1,8 @@
 import {AuthService} from 'paulvanbladel/aureliauth';
 import {inject} from 'aurelia-framework';
 
+// Using Aurelia's dependency injection, we inject the AuthService
+// with the @inject decorator
 @inject(AuthService)
 
 export class Logout {
@@ -9,8 +11,10 @@ export class Logout {
     this.authService = authService;
   };
   
-  activate(){
-
+  activate() {
+    // When we get to the logout route, the logout 
+    // method on the auth service will be called  
+    // and we will be redirected to thelogin view
     this.authService.logout("#/login")
     .then(response => {
       console.log("Logged Out");
@@ -19,5 +23,5 @@ export class Logout {
       console.log("Error Logging Out");
     });
 
-  }
+  };
 }
