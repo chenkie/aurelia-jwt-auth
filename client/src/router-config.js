@@ -18,6 +18,9 @@ export default class {
       
       config.title = 'Random Quotes App';
 
+      // Here we hook into the authorize extensibility point
+      // to add a route filter so that we can require authentication
+      // on certain routes
       config.addPipelineStep('authorize', AuthorizeStep);
 
       // Here we describe the routes we want along with information about them

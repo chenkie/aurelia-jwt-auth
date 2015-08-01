@@ -25,5 +25,5 @@ export class SecretQuote {
     }).catch(error => {
       console.log('Error getting quote');
     });
-  }
+  };
 }

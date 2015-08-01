@@ -14,7 +14,7 @@ export class Logout {
   activate() {
     // When we get to the logout route, the logout 
     // method on the auth service will be called  
-    // and we will be redirected to thelogin view
+    // and we will be redirected to the login view
     this.authService.logout("#/login")
     .then(response => {
       console.log("Logged Out");

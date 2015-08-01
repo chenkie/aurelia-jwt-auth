@@ -9,8 +9,8 @@ export class Login {
 
   // User inputs will be bound to these view models
   // and when submitting the form for login  
-  email;
-  password;
+  email = '';
+  password = '';
 
   // This view model will be given an error value
   // if anything goes wrong with the login

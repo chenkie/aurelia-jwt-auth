@@ -11,13 +11,13 @@ export class Signup{
 
   // These view models will be given values
   // from the signup form user input
-  email;
-  password;
+  email = '';
+  password = '';
 
   // Any signup errors will be reported by
   // giving this view model a value in the
   // catch block within the signup method
-  signupError;
+  signupError = '';
 
   constructor(auth) {
     this.auth = auth;
