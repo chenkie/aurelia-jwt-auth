@@ -41,5 +41,4 @@ export default class {
     this.router.configure(appRouterConfig);
 
   };
-
 }

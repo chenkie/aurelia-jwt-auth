@@ -5,7 +5,7 @@ import {AuthService} from 'paulvanbladel/aureliauth';
 // with the @inject decorator
 @inject(AuthService)
 
-export class Signup{
+export class Signup {
   
   heading = 'Sign Up';
 

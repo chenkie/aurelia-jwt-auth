@@ -9,7 +9,7 @@ export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .plugin('paulvanbladel/aureliauth', (baseConfig)=>{
+    .plugin('paulvanbladel/aureliauth', (baseConfig) => {
          baseConfig.configure(config);
     });
 

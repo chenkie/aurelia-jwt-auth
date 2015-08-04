@@ -25,7 +25,7 @@ export class App {
     this.appRouterConfig = appRouterConfig;
   };
   
-  activate(){
+  activate() {
     
     // Here we run the configuration when the app loads
     this.httpClientConfig.configure();
