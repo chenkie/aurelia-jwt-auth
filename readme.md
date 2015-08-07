@@ -6,8 +6,8 @@ This sample application shows how to do JWT authentication in Aurelia using the 
 
 All the Aurelia-related files are in the `client` directory and all NodeJS files in `server`. To install, clone this repo to your target folder and then do the following:
 
-1. `cd` into `server` and do `git submodule update --init` to pull in the NodeJS API
-2. Do `npm install`
+1. Do `git submodule update --init` to pull the NodeJS API into the `server` directory
+2. `cd` into `server` and do `npm install`
 3. Run the Node server by doing `node server.js`
 4. `cd` into `client` and do `npm install` followed by `jspm install`
 5. Do `gulp watch` to run the Gulp tasks
