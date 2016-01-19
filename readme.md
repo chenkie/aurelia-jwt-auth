@@ -1,4 +1,4 @@
-# Auerlia-Node Authentication Example
+# Aurelia-Node Authentication Example
 
 This sample application shows how to do JWT authentication in Aurelia using the [aurelia-auth](https://github.com/paulvanbladel/aurelia-auth) package. The app uses Auth0's simple [NodeJS random quote API](https://github.com/auth0/nodejs-jwt-authentication-sample) which allows us to authenticate and view Chuck Norris quotes if we have a valid JWT. Big thanks to Paul van Bladel for pointers from his [sample app repo](https://github.com/paulvanbladel/aurelia-auth-sample).
 
